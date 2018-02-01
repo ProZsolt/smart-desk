@@ -20,14 +20,12 @@ function webSocketSetup(){
       ws.send(f.getAttribute("data-direction") + " stop");
       return false;
     });
-    f.addEventListener('touchstart', function(e){
+    f.addEventListener('touchstart', function(){
       ws.send(f.getAttribute("data-direction") + " start");
-      e.preventDefault()
       return false;
     });
-    f.addEventListener('touchend', function(e){
+    f.addEventListener('touchend', function(){
       ws.send(f.getAttribute("data-direction") + " stop");
-      e.preventDefault()
       return false;
     });
   };
