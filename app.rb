@@ -6,6 +6,7 @@ require 'rpi_gpio'
 
 class SmartDesk < Sinatra::Base
   configure do
+    set :bind, '0.0.0.0'
     RPi::GPIO.set_numbering :bcm
     RPi::GPIO.setup 17, :as => :output, :initialize => :high
     RPi::GPIO.setup 27, :as => :output, :initialize => :high
