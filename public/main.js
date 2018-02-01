@@ -20,6 +20,14 @@ function webSocketSetup(){
       ws.send(f.getAttribute("data-direction") + " stop");
       return false;
     });
+    f.addEventListener('touchstart', function(){
+      ws.send(f.getAttribute("data-direction") + " start");
+      return false;
+    });
+    f.addEventListener('touchend', function(){
+      ws.send(f.getAttribute("data-direction") + " stop");
+      return false;
+    });
   };
 
   var buttons = document.getElementsByClassName('control-button');
