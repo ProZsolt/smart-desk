@@ -13,11 +13,11 @@ function webSocketSetup(){
 
   var sender = function(f){
     f.addEventListener('mousedown', function(){
-      ws.send(f.getAttribute("data-direction") + " 1");
+      ws.send(f.getAttribute("data-direction") + " start");
       return false;
     });
     f.addEventListener('mouseup', function(){
-      ws.send(f.getAttribute("data-direction") + " 0");
+      ws.send(f.getAttribute("data-direction") + " stop");
       return false;
     });
   };

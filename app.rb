@@ -39,6 +39,8 @@ class SmartDesk < Sinatra::Base
 
   def move_desk msg
     direction, value = msg.split
+    p direction
+    p value
     if direction == 'up'
       if value == 'start'
         RPi::GPIO.set_low settings.up_pin
