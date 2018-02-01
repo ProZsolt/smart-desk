@@ -11,7 +11,7 @@ class SmartDesk < Sinatra::Base
     RPi::GPIO.setup 17, :as => :output, :initialize => :high
     RPi::GPIO.setup 27, :as => :output, :initialize => :high
     set :up_pin, 17
-    set :down_pin 27
+    set :down_pin, 27
   end
 
   get '/' do
